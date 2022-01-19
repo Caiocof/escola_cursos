@@ -6,7 +6,7 @@
 Versionamento de código com Django
 </h1>
 
-<p align="center">Nesse projeto vamos desenvolver uma API com versionamento e integração a front react!</p>
+<p align="center">Nesse projeto vamos desenvolver uma API com funcionalidade de segurança, cache e testes!</p>
 
 
 <p align="center">
@@ -24,6 +24,8 @@ Versionamento de código com Django
 ## Objetivo
 
 - Criar versões de uma API Django
-- Limitar os métodos de uma view
-- Integrar a API com um front react
+- Limitar a quantidade de solicitações a API
+- Preparar a API para integrar com front externos
+- Implementar cache em determinadas rotas
+- Criar testes Python para os métodos
 
