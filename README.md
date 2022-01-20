@@ -17,9 +17,13 @@ Versionamento de código com Django
 
 ## Iniando o projeto
 
-- Execute "pip install -r requirements.txt"
-- Depois "python manage.py runserver"
-- Abra http://127.0.0.1:8000/admin (user:admin, password:admin753)
+- Execute os seguintes passos:
+    - pip install -r requirements.txt
+    - python manage.py makemigration
+    - python manage.py migrate
+    - python seed.py
+    - python manage.py runserver
+- Em seguida abra http://127.0.0.1:8000/admin (user:admin, password:admin753)
 
 ## Objetivo
 
