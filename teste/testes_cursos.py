@@ -5,7 +5,7 @@ from django.urls import reverse
 from escola.models import Curso
 
 
-class CursoTestCase(APITestCase):
+class CursosTestCase(APITestCase):
 
     def setUp(self):
         # LISTANDO AS ROTAS
@@ -22,12 +22,12 @@ class CursoTestCase(APITestCase):
             nivel='A'
         )
 
-    def test_requisicao_get_cursos(self):
+    def test_get_cursos(self):
         """Teste para verificar o GET all"""
         response = self.client.get(self.list_url)
         self.assertEquals(response.status_code, status.HTTP_200_OK)
 
-    def test_requisicao_post_cursos(self):
+    def test_post_cursos(self):
         """Teste para verificar o POST cursos"""
         data = {
             'codigo_curso': f'CTT3',
@@ -38,12 +38,12 @@ class CursoTestCase(APITestCase):
         response = self.client.post(self.list_url, data=data)
         self.assertEquals(response.status_code, status.HTTP_201_CREATED)
 
-    def test_requisicao_delete_cursos(self):
+    def test_delete_cursos(self):
         """Teste para verificar o DELETE do curso, o retorno esperado e False"""
         response = self.client.delete('/cursos/1/')
         self.assertEquals(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
 
-    def test_requisicao_put_cursos(self):
+    def test_put_cursos(self):
         """Teste para verificar o PUT de cursos"""
         data = {
             'codigo_curso': f'CTT1',
